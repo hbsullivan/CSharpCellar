@@ -21,8 +21,14 @@ It will also have an education section for teaching users about famous wine regi
 * Linq
 * Swagger
 
-If you finish developing the minimum viable product (MVP) with time to spare, what will you work on next? Describe these features here: Be specific.
+### If you finish developing the minimum viable product (MVP) with time to spare, what will you work on next? Describe these features here: Be specific.
+* Add styling with Tailwind
+* Allow option to add photo of wine
+* Create some sort of social media aspect so users can see reviews of other users
+* Add filters for sorting through wines in cellar
 
-What additional tools, frameworks, libraries, APIs, or other resources will these additional features require?
+### What additional tools, frameworks, libraries, APIs, or other resources will these additional features require?
+* Tailwind
 
-Is there anything else you'd like your instructor to know?
+### Is there anything else you'd like your instructor to know?
+Hoping to brush up on my C#/.Net skills!
