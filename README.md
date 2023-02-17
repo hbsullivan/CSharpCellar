@@ -4,3 +4,4 @@
 * 9:30-10:00 -- Look through LHTP C# lessons
 * 10:00-10:30 -- Continue reviewing C#/.Net concepts
 * 10:30-11:00 -- Build out directories
+* 11:00-11:30 -- Set up database
