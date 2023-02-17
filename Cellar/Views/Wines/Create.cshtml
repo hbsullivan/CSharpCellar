@@ -1,0 +1,31 @@
+
+@{
+  Layout = "_Layout";
+}
+
+@model Cellar.Models.Wine
+
+<h4>Add wine to cellar</h4>
+<hr />
+@using (Html.BeginForm())
+{
+  @Html.LabelFor(model => model.Producer)
+  @Html.TextBoxFor(model => model.Producer)
+
+  @Html.LabelFor(model => model.Origin)
+  @Html.TextBoxFor(model => model.Origin)
+
+  @Html.LabelFor(model => model.Vintage)
+  @Html.TextBoxFor(model => model.Vintage)
+
+  @Html.LabelFor(model => model.Price)
+  @Html.TextBoxFor(model => model.Price)
+
+  @Html.LabelFor(model => model.Location)
+  @Html.TextBoxFor(model => model.Location)
+
+  @Html.LabelFor(model => model.Description)
+  @Html.TextBoxFor(model => model.Description)
+
+  <input type="submit" value="Add!" />
+}

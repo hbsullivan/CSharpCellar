@@ -7,3 +7,4 @@
 * 11:00-11:30 -- Set up database
 * 11:30-12:00 -- Research different controller actions
 * 1:00-2:00 -- Watch video about MVC
+* 2:00-2:30 -- Start building out some routes

@@ -12,7 +12,7 @@ namespace Cellar.Models
     public string Price { get; set; }
     public string Location { get; set; }
     public string Description { get; set; }
-    public bool Consumed { get; set; }
+    public bool Consumed { get; set; } = false;
     public string TastingNote { get; set; }
     public string Rating { get; set; }
     public ApplicationUser User { get; set; }
