@@ -6,3 +6,4 @@
 * 10:30-11:00 -- Build out directories
 * 11:00-11:30 -- Set up database
 * 11:30-12:00 -- Research different controller actions
+* 1:00-2:00 -- Watch video about MVC
