@@ -11,6 +11,7 @@ It will also have an education section for teaching users about famous wine regi
 * Full CRUD funcionality for wines in the cellar
 * Upon drinking, user should be prompted to add tasting notes and rating.
 * There should be an API (custom built or sourced) that provides information about various wine regions.
+* Authentication
 
 ### What tools, frameworks, libraries, APIs, modules and/or other resources (whatever is specific to your track, and your language) will you use to create this MVP? List them all here. Be specific.
 * C#
