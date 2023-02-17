@@ -15,7 +15,5 @@ namespace Cellar.Models
     public string TastingNote { get; set; }
     public string Rating { get; set; }
     public ApplicationUser User { get; set; }
-    public int StatusId { get; set; }
-    public Status Status { get; set; }
   }
 }

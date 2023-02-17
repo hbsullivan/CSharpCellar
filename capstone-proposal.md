@@ -8,7 +8,6 @@ The purpose of this project is to build an app that allows users to keep track o
 
 ### List the absolute minimum features the project requires to meet this purpose or goal:
 * Full CRUD funcionality for wines in the cellar
-* Upon drinking, user should be prompted to add tasting notes and rating.
 * Authentication
 
 ### What tools, frameworks, libraries, APIs, modules and/or other resources (whatever is specific to your track, and your language) will you use to create this MVP? List them all here. Be specific.
@@ -20,6 +19,7 @@ The purpose of this project is to build an app that allows users to keep track o
 * Linq
 
 ### If you finish developing the minimum viable product (MVP) with time to spare, what will you work on next? Describe these features here: Be specific.
+* Upon drinking, user should be prompted to add tasting notes and rating.
 * There should be an API (custom built or sourced) that provides information about various wine regions.
 * Add styling with Tailwind
 * Allow option to add photo of wine
