@@ -9,3 +9,4 @@
 * 1:00-2:00 -- Watch video about MVC
 * 2:00-2:30 -- Start building out some routes
 * 2:30-3:30 -- Pause on routes, need to plan more. Start working on a figma
+* 3:30-4:15 -- Continue working on figma
