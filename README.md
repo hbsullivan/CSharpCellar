@@ -10,3 +10,4 @@
 * 2:00-2:30 -- Start building out some routes
 * 2:30-3:30 -- Pause on routes, need to plan more. Start working on a figma
 * 3:30-4:15 -- Continue working on figma
+* 4:15-4:30 -- EOD: Figma is complete, will begin coding next Friday
