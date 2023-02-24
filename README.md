@@ -13,4 +13,5 @@
 * 4:15-4:30 -- EOD: Figma is complete, will begin coding next Friday
 
 #### Friday, 02/24
-* 8:00 -- Day Two
+* 8:00-8:30 -- Day Two. Start CRUD functionality
+* 8:30-9:00 -- Research how to implement different controller routes
