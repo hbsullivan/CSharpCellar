@@ -19,3 +19,4 @@
 * 10:00-11:15 -- Add Authentication and Authorization
 * 11:15-12:00 -- Associate Wines with users
 * 1:00-1:30 -- Research conditionals in controllers
+* 1:30-2:00 -- Add 'consumed' route and second details page

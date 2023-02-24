@@ -30,6 +30,17 @@ namespace Cellar.Controllers
       ApplicationUser currentUser = await _userManager.FindByIdAsync(userId);
       List<Wine> userItems = _db.Wines
                           .Where(entry => entry.User.Id == currentUser.Id)
+                          .Where(wine => wine.Consumed == false)
+                          .ToList();
+      return View(userItems);
+    }
+    public async Task<ActionResult> Consumed()
+    {
+      string userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+      ApplicationUser currentUser = await _userManager.FindByIdAsync(userId);
+      List<Wine> userItems = _db.Wines
+                          .Where(entry => entry.User.Id == currentUser.Id)
+                          .Where(wine => wine.Consumed == true)
                           .ToList();
       return View(userItems);
     }
@@ -51,6 +62,12 @@ namespace Cellar.Controllers
     }
 
     public ActionResult Details(int id)
+    {
+      Wine thisWine = _db.Wines
+                          .FirstOrDefault(wine => wine.WineId == id);
+      return View(thisWine);
+    }
+    public ActionResult DetailsTwo(int id)
     {
       Wine thisWine = _db.Wines
                           .FirstOrDefault(wine => wine.WineId == id);

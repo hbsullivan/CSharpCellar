@@ -1,0 +1,19 @@
+@{
+ Layout = "_Layout";
+}
+
+@model Cellar.Models.Wine;
+@using Cellar.Models;
+
+<h2>Wine Details</h2>
+
+<hr />
+
+<h4>Wine: @Html.DisplayFor(model => model.Producer)</h4>
+<h4>Origin: @Html.DisplayFor(model => model.Origin)</h4>
+<h4>Vintage: @Html.DisplayFor(model => model.Vintage)</h4>
+<h4>Price: @Html.DisplayFor(model => model.Price)</h4>
+<h4>Description: @Html.DisplayFor(model => model.Description)</h4>
+<h4>Consumed: @Html.DisplayFor(model => model.Consumed)</h4>
+<h4>Tasting Note: @Html.DisplayFor(model => model.TastingNote)</h4>
+<h4>Rating: @Html.DisplayFor(model => model.Rating)</h4>
