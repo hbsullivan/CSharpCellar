@@ -33,5 +33,44 @@ namespace Cellar.Controllers
       _db.SaveChanges();
       return RedirectToAction("Index");
     }
+
+    public ActionResult Details(int id)
+    {
+      Wine thisWine = _db.Wines
+                          .FirstOrDefault(wine => wine.WineId == id);
+      return View(thisWine);
+    }
+
+    public ActionResult Edit(int id)
+    {
+      Wine thisWine = _db.Wines
+                            .FirstOrDefault(wine => wine.WineId == id);
+      return View(thisWine);
+    }
+
+    [HttpPost]
+    public ActionResult Edit(Wine wine)
+    {
+      _db.Wines.Update(wine);
+      _db.SaveChanges();
+      return RedirectToAction("Index");
+      
+    }
+
+
+    public ActionResult Delete(int id)
+    {
+      Wine thisWine = _db.Wines.FirstOrDefault(wines => wines.WineId == id);
+      return View(thisWine);
+    }
+
+    [HttpPost, ActionName("Delete")]
+    public ActionResult DeleteConfirmed(int id)
+    {
+      Wine thisWine = _db.Wines.FirstOrDefault(wines => wines.WineId == id);
+      _db.Wines.Remove(thisWine);
+      _db.SaveChanges();
+      return RedirectToAction("Index");
+    }
   }
 }

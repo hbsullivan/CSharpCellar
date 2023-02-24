@@ -1,0 +1,16 @@
+@{
+  Layout = "_Layout";
+}
+
+@model Cellar.Models.Wine
+
+<h3>Are you sure you want to remove this wine from your cellar?</h3>
+
+<p>@Html.DisplayNameFor(model => model.Producer): @Html.DisplayFor(model => model.Producer)</p>
+<p>@Html.DisplayNameFor(model => model.Vintage): @Html.DisplayFor(model => model.Vintage)</p>
+<p>@Html.DisplayNameFor(model => model.Origin): @Html.DisplayFor(model => model.Origin)</p>
+
+@using (Html.BeginForm())
+{
+  <input type="submit" value="Remove" />
+}

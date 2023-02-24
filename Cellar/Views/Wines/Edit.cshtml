@@ -1,0 +1,35 @@
+@{
+  Layout = "_Layout";
+}
+
+@model Cellar.Models.Wine;
+@using Cellar.Models;
+
+<h2>Wine</h2>
+
+<h4>Update this Wine: @Html.DisplayFor(model => model.Producer)</h4>
+
+@using (@Html.BeginForm())
+{
+  @Html.HiddenFor(model => model.WineId)
+
+  @Html.LabelFor(model => model.Producer)
+  @Html.EditorFor(model => model.Producer)
+
+  @Html.LabelFor(model => model.Origin)
+  @Html.EditorFor(model => model.Origin)
+
+  @Html.LabelFor(model => model.Vintage)
+  @Html.EditorFor(model => model.Vintage)
+
+  @Html.LabelFor(model => model.Price)
+  @Html.EditorFor(model => model.Price)
+
+  @Html.LabelFor(model => model.Location)
+  @Html.EditorFor(model => model.Location)
+
+  @Html.LabelFor(model => model.Description)
+  @Html.EditorFor(model => model.Description)
+
+  <input type="submit" value="Update" />
+}
