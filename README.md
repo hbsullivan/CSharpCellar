@@ -21,3 +21,4 @@
 * 1:00-1:30 -- Research conditionals in controllers
 * 1:30-2:00 -- Add 'consumed' route and second details page
 * 2:00-2:30 -- Add community tasting notes to home page
+* 2:30-3:00 -- Start researching Tailwind
