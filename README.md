@@ -20,3 +20,4 @@
 * 11:15-12:00 -- Associate Wines with users
 * 1:00-1:30 -- Research conditionals in controllers
 * 1:30-2:00 -- Add 'consumed' route and second details page
+* 2:00-2:30 -- Add community tasting notes to home page
