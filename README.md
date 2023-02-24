@@ -15,3 +15,4 @@
 #### Friday, 02/24
 * 8:00-8:30 -- Day Two. Start CRUD functionality
 * 8:30-9:00 -- Research how to implement different controller routes
+* 9:00-10:00 -- Try to add 'Drink' route

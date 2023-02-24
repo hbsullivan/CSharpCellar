@@ -85,7 +85,7 @@ namespace Cellar.Controllers
     {
       _db.Wines.Update(wine);
       _db.SaveChanges();
-      return RedirectToAction("Details");
+      return RedirectToAction("Index");
       
     }
   }
