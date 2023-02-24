@@ -3,9 +3,12 @@ using Microsoft.EntityFrameworkCore;
 using System.Linq;
 using Cellar.Models;
 using System.Collections.Generic;
+using Microsoft.AspNetCore.Authorization;
+
 
 namespace Cellar.Controllers
 {
+  [Authorize]
   public class WinesController : Controller
   {
     private readonly CellarContext _db;

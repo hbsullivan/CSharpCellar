@@ -16,4 +16,4 @@
 * 8:00-8:30 -- Day Two. Start CRUD functionality
 * 8:30-9:00 -- Research how to implement different controller routes
 * 9:00-10:00 -- Try to add 'Drink' route
-* 10:00-11:00 -- Add Authentication
+* 10:00-11:15 -- Add Authentication and Authorization
