@@ -17,3 +17,4 @@
 * 8:30-9:00 -- Research how to implement different controller routes
 * 9:00-10:00 -- Try to add 'Drink' route
 * 10:00-11:15 -- Add Authentication and Authorization
+* 11:15-12:00 -- Associate Wines with users

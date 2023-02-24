@@ -4,6 +4,9 @@ using System.Linq;
 using Cellar.Models;
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
+using System.Threading.Tasks;
+using System.Security.Claims;
 
 
 namespace Cellar.Controllers
@@ -12,16 +15,23 @@ namespace Cellar.Controllers
   public class WinesController : Controller
   {
     private readonly CellarContext _db;
+    private readonly UserManager<ApplicationUser> _userManager;
 
-    public WinesController(CellarContext db)
+
+    public WinesController(UserManager<ApplicationUser> userManager,CellarContext db)
     {
+      _userManager = userManager;
       _db = db;
     }
 
-    public ActionResult Index()
+    public async Task<ActionResult> Index()
     {
-      List<Wine> model = _db.Wines.ToList();
-      return View(model);
+      string userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+      ApplicationUser currentUser = await _userManager.FindByIdAsync(userId);
+      List<Wine> userItems = _db.Wines
+                          .Where(entry => entry.User.Id == currentUser.Id)
+                          .ToList();
+      return View(userItems);
     }
 
     public ActionResult Create()
@@ -30,8 +40,11 @@ namespace Cellar.Controllers
     }
 
     [HttpPost]
-    public ActionResult Create(Wine wine)
+    public async Task<ActionResult> Create(Wine wine)
     {
+      string userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+        ApplicationUser currentUser = await _userManager.FindByIdAsync(userId);
+      wine.User = currentUser;
       _db.Wines.Add(wine);
       _db.SaveChanges();
       return RedirectToAction("Index");
