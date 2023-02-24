@@ -1,0 +1,32 @@
+@{
+  Layout = "_Layout";
+}
+
+@model Cellar.Models.Wine
+@using Cellar.Models
+
+<h3>Drink this Wine: @Html.DisplayFor(model => model.Producer) -- @Html.DisplayFor(model => model.Vintage)</h3>
+<p>From: @Html.DisplayFor(model => model.Origin)</p>
+
+@using (@Html.BeginForm())
+{
+  @Html.HiddenFor(model => model.WineId)
+  @Html.HiddenFor(model => model.Producer)
+  @Html.HiddenFor(model => model.Origin)
+  @Html.HiddenFor(model => model.Vintage)
+  @Html.HiddenFor(model => model.Price)
+  @Html.HiddenFor(model => model.Location)
+  @Html.HiddenFor(model => model.Description)
+
+
+  @Html.LabelFor(model => model.Consumed)
+  @Html.EditorFor(model => model.Consumed)
+
+  @Html.LabelFor(model => model.TastingNote)
+  @Html.EditorFor(model => model.TastingNote)
+
+  @Html.LabelFor(model => model.Rating)
+  @Html.EditorFor(model => model.Rating)
+
+  <input type="submit" value="Drink" />
+}

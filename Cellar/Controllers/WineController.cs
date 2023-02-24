@@ -72,5 +72,21 @@ namespace Cellar.Controllers
       _db.SaveChanges();
       return RedirectToAction("Index");
     }
+
+    public ActionResult Drink(int id)
+    {
+      Wine thisWine = _db.Wines
+                            .FirstOrDefault(wines => wines.WineId == id);
+      return View(thisWine);
+    }
+
+    [HttpPost]
+    public ActionResult Drink(Wine wine)
+    {
+      _db.Wines.Update(wine);
+      _db.SaveChanges();
+      return RedirectToAction("Details");
+      
+    }
   }
 }
