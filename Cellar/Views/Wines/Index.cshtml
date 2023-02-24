@@ -12,11 +12,13 @@
   <h3>You have no Wines! Buy some!</h3>
 }
 
-<ul>
+
   @foreach(Wine wine in Model)
   {
-    <li class="hair">@Html.ActionLink($"{wine.Producer}", "Details", new { id = wine.WineId })</li>
+   <p>@Html.ActionLink($"{wine.Producer} | {wine.Vintage}", "Details", new { id = wine.WineId })</p>
   }
-</ul>
+
+  <hr />
+
 <p>@Html.ActionLink("Add wine to cellar", "Create")</p>
 <p>@Html.ActionLink("Back Home", "Index", "Home")</p>

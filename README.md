@@ -18,3 +18,4 @@
 * 9:00-10:00 -- Try to add 'Drink' route
 * 10:00-11:15 -- Add Authentication and Authorization
 * 11:15-12:00 -- Associate Wines with users
+* 1:00-1:30 -- Research conditionals in controllers
