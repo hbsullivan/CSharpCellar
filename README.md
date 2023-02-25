@@ -23,3 +23,4 @@
 * 2:00-2:30 -- Add community tasting notes to home page
 * 2:30-3:00 -- Start researching Tailwind
 * 3:00-3:45 -- Continue researching Tailwind
+* 3:45-4:45 -- EOD: Update figma with new objectives and plan for next week
