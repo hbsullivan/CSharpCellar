@@ -5,10 +5,62 @@
 
 <h1>Wine Regions</h1>
 
+<h3>France</h3>
 <ul>
   @foreach (Region region in Model)
 {
+  if(region.Country == "France") {
     <li><a href="/Wines/RegionDetails/@(region.RegionId)">@region.Appellation</a></li>
+  }
+}
 
+</ul>
+<h3>Italy</h3>
+<ul>
+  @foreach (Region region in Model)
+{
+  if(region.Country == "Italy") {
+    <li><a href="/Wines/RegionDetails/@(region.RegionId)">@region.Appellation</a></li>
+  }
+}
+</ul>
+
+<h3>USA</h3>
+<ul>
+  @foreach (Region region in Model)
+{
+  if(region.Country == "USA") {
+    <li><a href="/Wines/RegionDetails/@(region.RegionId)">@region.Appellation</a></li>
+  }
+}
+</ul>
+
+<h3>Spain</h3>
+<ul>
+  @foreach (Region region in Model)
+{
+  if(region.Country == "Spain") {
+    <li><a href="/Wines/RegionDetails/@(region.RegionId)">@region.Appellation</a></li>
+  }
+}
+</ul>
+
+<h3>Australia</h3>
+<ul>
+  @foreach (Region region in Model)
+{
+  if(region.Country == "Australia") {
+    <li><a href="/Wines/RegionDetails/@(region.RegionId)">@region.Appellation</a></li>
+  }
+}
+</ul>
+
+<h3>New Zealand</h3>
+<ul>
+  @foreach (Region region in Model)
+{
+  if(region.Country == "New Zealand") {
+    <li><a href="/Wines/RegionDetails/@(region.RegionId)">@region.Appellation</a></li>
+  }
 }
 </ul>

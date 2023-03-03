@@ -34,3 +34,4 @@
 * 10:30-11:00 -- Build out basic READ functionality for API
 * 11:00-12:00 -- Connect Cellar application to Cellar Api
 * 1:00-1:30 -- Start adding more data to API
+* 1:30-2:30 -- Organize data on education page
