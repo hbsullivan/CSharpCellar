@@ -30,3 +30,4 @@
 * 8:00-8:30 -- Review Figma and To-Do's for today
 * 8:30-9:00 -- Add delete functionality to consumed page
 * 9:00-10:00 -- Research potential Wine Api's for education section
+* 10:00-10:30 -- Decided and started to build out own API 
