@@ -1,0 +1,13 @@
+@{
+  Layout = "_Layout";
+}
+@using CellarClient.Models
+
+<h1>Wine Regions</h1>
+
+<ul>
+  @foreach (Region region in Model)
+{
+  <li><a href="/Wines/RegionDetails/@(region.RegionId)">@region.Appellation</a></li>
+}
+</ul>

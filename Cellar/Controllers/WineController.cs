@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using System.Threading.Tasks;
 using System.Security.Claims;
+using CellarClient.Models;
 
 
 namespace Cellar.Controllers
@@ -121,5 +122,17 @@ namespace Cellar.Controllers
       return RedirectToAction("Index");
       
     }
+
+    public IActionResult Education() 
+    {
+      List<Region> regions = Region.GetRegions();
+      return View(regions);
+    }
+
+  public IActionResult RegionDetails(int id)
+  {
+    Region region = Region.GetDetails(id);
+    return View(region);
+  }
   }
 }

@@ -32,3 +32,4 @@
 * 9:00-10:00 -- Research potential Wine Api's for education section
 * 10:00-10:30 -- Decided and started to build out own API 
 * 10:30-11:00 -- Build out basic READ functionality for API
+* 11:00-12:00 -- Connect Cellar application to Cellar Api
