@@ -24,3 +24,6 @@
 * 2:30-3:00 -- Start researching Tailwind
 * 3:00-3:45 -- Continue researching Tailwind
 * 3:45-4:45 -- EOD: Update figma with new objectives and plan for next week
+
+#### Friday, 03/03
+* 8:00 -- Start of Day!
