@@ -36,3 +36,4 @@
 * 1:00-1:30 -- Start adding more data to API
 * 1:30-2:30 -- Organize data on education page
 * 2:30-3:00 -- WIP: Trying to install Tailwind
+* 3:00-3:45 -- Project broke. Not sure what's wrong.
