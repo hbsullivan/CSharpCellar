@@ -17,3 +17,6 @@
 <h4>Consumed: @Html.DisplayFor(model => model.Consumed)</h4>
 <h4>Tasting Note: @Html.DisplayFor(model => model.TastingNote)</h4>
 <h4>Rating: @Html.DisplayFor(model => model.Rating)</h4>
+
+<p>@Html.ActionLink("Remove Wine", "Delete", new { id = Model.WineId })</p>
+
