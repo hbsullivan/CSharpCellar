@@ -31,3 +31,4 @@
 * 8:30-9:00 -- Add delete functionality to consumed page
 * 9:00-10:00 -- Research potential Wine Api's for education section
 * 10:00-10:30 -- Decided and started to build out own API 
+* 10:30-11:00 -- Build out basic READ functionality for API
