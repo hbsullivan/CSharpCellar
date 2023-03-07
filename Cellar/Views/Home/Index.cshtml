@@ -16,7 +16,13 @@
 <p>
     @using (@Html.BeginForm("Index", "Home", FormMethod.Get))
     {
-        <b>Search By Vintage: </b>
+        <b>Search By: </b>
+        @Html.RadioButton("searchBy", "Vintage", true) <text>Vintage</text>
+        @Html.RadioButton("searchBy", "Origin") <text>Origin</text><br />
+        @Html.RadioButton("searchBy", "Producer") <text>Producer</text><br />
+        @Html.RadioButton("searchBy", "Price") <text>Price</text><br />
+        @Html.RadioButton("searchBy", "Location") <text>Location</text><br />
+        @Html.RadioButton("searchBy", "Rating") <text>Rating</text><br />
         @Html.TextBox("search") <input type="submit" value="search" />
     }
 </p>
