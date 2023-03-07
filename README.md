@@ -39,3 +39,6 @@
 * 3:00-3:45 -- Project broke. Not sure what's wrong.
 * 3:45-4:15 -- Fixed project. Tailwind not installed.
 * 4:15-4:45 -- EOD: Re-visit figma and plan for next week
+
+#### Friday, 03/07
+* 8:00 -- Start of Day!
