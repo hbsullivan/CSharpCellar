@@ -25,15 +25,75 @@ namespace Cellar.Controllers
       _db = db;
     }
 
-    public async Task<ActionResult> Index()
+    public async Task<ActionResult> Index(string searchBy, string search)
     {
       string userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
       ApplicationUser currentUser = await _userManager.FindByIdAsync(userId);
-      List<Wine> userItems = _db.Wines
-                          .Where(entry => entry.User.Id == currentUser.Id)
-                          .Where(wine => wine.Consumed == false)
-                          .ToList();
-      return View(userItems);
+
+      if (search == null)
+        {
+          List<Wine> userItems = _db.Wines
+                              .Where(entry => entry.User.Id == currentUser.Id)
+                              .Where(wine => wine.Consumed == false)
+                              .ToList();
+          return View(userItems);
+        } 
+        else if(searchBy == "Vintage") 
+        {
+          List<Wine> userItems = _db.Wines
+                              .Where(entry => entry.User.Id == currentUser.Id)
+                              .Where(wine => wine.Consumed == false && wine.Vintage == search)
+                              .ToList();
+          return View(userItems);
+        } 
+        else if(searchBy == "Origin") 
+        {
+          List<Wine> userItems = _db.Wines
+                              .Where(entry => entry.User.Id == currentUser.Id)
+                              .Where(wine => wine.Consumed == false && wine.Origin == search)
+                              .ToList();
+          return View(userItems);
+        } 
+        else if(searchBy == "Producer") 
+        {
+          List<Wine> userItems = _db.Wines
+                              .Where(entry => entry.User.Id == currentUser.Id)
+                              .Where(wine => wine.Consumed == false && wine.Producer == search)
+                              .ToList();
+          return View(userItems);
+        } 
+        else if(searchBy == "Price") 
+        {
+          List<Wine> userItems = _db.Wines
+                              .Where(entry => entry.User.Id == currentUser.Id)
+                              .Where(wine => wine.Consumed == false && wine.Price == search)
+                              .ToList();
+          return View(userItems);
+        } 
+        else if(searchBy == "Location") 
+        {
+          List<Wine> userItems = _db.Wines
+                              .Where(entry => entry.User.Id == currentUser.Id)
+                              .Where(wine => wine.Consumed == false && wine.Location == search)
+                              .ToList();
+          return View(userItems);
+        } 
+        else if(searchBy == "Description") 
+        {
+          List<Wine> userItems = _db.Wines
+                              .Where(entry => entry.User.Id == currentUser.Id)
+                              .Where(wine => wine.Consumed == false && wine.Description == search)
+                              .ToList();
+          return View(userItems);
+        } 
+        else 
+        {
+          List<Wine> userItems = _db.Wines
+                              .Where(entry => entry.User.Id == currentUser.Id)
+                              .Where(wine => wine.Consumed == false)
+                              .ToList();
+          return View(userItems);
+        }
     }
     public async Task<ActionResult> Consumed()
     {

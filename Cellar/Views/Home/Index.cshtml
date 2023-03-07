@@ -22,10 +22,12 @@
         @Html.RadioButton("searchBy", "Producer") <text>Producer</text><br />
         @Html.RadioButton("searchBy", "Price") <text>Price</text><br />
         @Html.RadioButton("searchBy", "Location") <text>Location</text><br />
+        @Html.RadioButton("searchBy", "Description") <text>Description</text><br />
         @Html.RadioButton("searchBy", "Rating") <text>Rating</text><br />
         @Html.TextBox("search") <input type="submit" value="search" />
     }
 </p>
+<hr />
 
 
   @foreach(Wine wine in Model)

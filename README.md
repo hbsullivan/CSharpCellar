@@ -49,3 +49,4 @@
 * 10:30-11:00 -- WIP: adding search bar to home controller
 * 11:00-12:00 -- Add search by vintage functionality to home controller
 * 1:00-1:45 -- Add full search functionality to home controller
+* 1:45-2:30 -- Add full search funcionality to cellar

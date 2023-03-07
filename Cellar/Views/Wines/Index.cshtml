@@ -12,10 +12,26 @@
   <h3>You have no Wines! Buy some!</h3>
 }
 
+<p>
+    @using (@Html.BeginForm("Index", "Wines", FormMethod.Get))
+    {
+        <b>Search By: </b>
+        @Html.RadioButton("searchBy", "Vintage", true) <text>Vintage</text>
+        @Html.RadioButton("searchBy", "Origin") <text>Origin</text><br />
+        @Html.RadioButton("searchBy", "Producer") <text>Producer</text><br />
+        @Html.RadioButton("searchBy", "Price") <text>Price</text><br />
+        @Html.RadioButton("searchBy", "Location") <text>Location</text><br />
+        @Html.RadioButton("searchBy", "Description") <text>Description</text><br />
+        @Html.TextBox("search") <input type="submit" value="search" />
+    }
+</p>
+
 
   @foreach(Wine wine in Model)
   {
+    <hr />
    <p>@Html.ActionLink($"{wine.Producer} | {wine.Vintage}", "Details", new { id = wine.WineId })</p>
+
   }
 
   <hr />

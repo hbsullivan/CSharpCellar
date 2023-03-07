@@ -71,6 +71,13 @@ namespace Cellar.Controllers
                             .ToList();
         return View(userItems);
       }
+      else if(searchBy == "Description")
+      {
+        List<Wine> userItems = _db.Wines
+                            .Where(wine => wine.Consumed == true && wine.Description == search)
+                            .ToList();
+        return View(userItems);
+      }
       else
       {
         List<Wine> userItems = _db.Wines
