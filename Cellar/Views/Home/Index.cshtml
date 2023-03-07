@@ -13,13 +13,13 @@
   <h3>No Community Tasting Notes</h3>
 }
 
-  @using (Html.BeginForm())
-{
 <p>
-    @Html.TextBox("SearchName")
-    <input type="submit" value="Search" />
+    @using (@Html.BeginForm("Index", "Home", FormMethod.Get))
+    {
+        <b>Search By Vintage: </b>
+        @Html.TextBox("search") <input type="submit" value="search" />
+    }
 </p>
-}
 
 
   @foreach(Wine wine in Model)

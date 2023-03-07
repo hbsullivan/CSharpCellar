@@ -20,19 +20,23 @@ namespace Cellar.Controllers
     }
 
     [HttpGet("/")]
-    public async Task<IActionResult> Index(string searchName)
+    public ActionResult Index(string search)
     {
-    var wines = from m in _db.Wines
-          select m;
-      if (!String.IsNullOrEmpty(searchName))
+      if(search != null)
       {
-        wines = wines.Where(s => s.Producer!.Contains(searchName));
-        return View(await wines);
+        List<Wine> userItems = _db.Wines
+                            .Where(wine => wine.Consumed == true && wine.Vintage == search)
+                            .ToList();
+        return View(userItems);
       }
-      List<Wine> userItems = _db.Wines
-                          .Where(wine => wine.Consumed == true)
-                          .ToList();
-      return View(userItems);
+      else 
+      {
+        List<Wine> userItems = _db.Wines
+                            .Where(wine => wine.Consumed == true)
+                            .ToList();
+        return View(userItems);
+      }
+
     }
   }
 }

@@ -47,3 +47,4 @@
 * 9:00-9:30 -- Can't find any styling options I like. Will come back to this
 * 9:30-10:30 -- Research adding a search bar 
 * 10:30-11:00 -- WIP: adding search bar to home controller
+* 11:00-12:00 -- Add search by vintage functionality to home controller
