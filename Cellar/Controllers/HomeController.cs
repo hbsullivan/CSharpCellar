@@ -32,49 +32,49 @@ namespace Cellar.Controllers
       else if(searchBy == "Vintage")
       {
         List<Wine> userItems = _db.Wines
-                            .Where(wine => wine.Consumed == true && wine.Vintage == search)
+                            .Where(wine => wine.Consumed == true && wine.Vintage.Contains(search))
                             .ToList();
         return View(userItems);
       }
       else if(searchBy == "Origin")
       {
         List<Wine> userItems = _db.Wines
-                            .Where(wine => wine.Consumed == true && wine.Origin == search)
+                            .Where(wine => wine.Consumed == true && wine.Origin.Contains(search))
                             .ToList();
         return View(userItems);
       }
       else if(searchBy == "Producer")
       {
         List<Wine> userItems = _db.Wines
-                            .Where(wine => wine.Consumed == true && wine.Producer == search)
+                            .Where(wine => wine.Consumed == true && wine.Producer.Contains(search))
                             .ToList();
         return View(userItems);
       }
       else if(searchBy == "Price")
       {
         List<Wine> userItems = _db.Wines
-                            .Where(wine => wine.Consumed == true && wine.Price == search)
+                            .Where(wine => wine.Consumed == true && wine.Price.Contains(search))
                             .ToList();
         return View(userItems);
       }
       else if(searchBy == "Location")
       {
         List<Wine> userItems = _db.Wines
-                            .Where(wine => wine.Consumed == true && wine.Location == search)
+                            .Where(wine => wine.Consumed == true && wine.Location.Contains(search))
                             .ToList();
         return View(userItems);
       }
       else if(searchBy == "Rating")
       {
         List<Wine> userItems = _db.Wines
-                            .Where(wine => wine.Consumed == true && wine.Rating == search)
+                            .Where(wine => wine.Consumed == true && wine.Rating.Contains(search))
                             .ToList();
         return View(userItems);
       }
       else if(searchBy == "Description")
       {
         List<Wine> userItems = _db.Wines
-                            .Where(wine => wine.Consumed == true && wine.Description == search)
+                            .Where(wine => wine.Consumed == true && wine.Description.Contains(search))
                             .ToList();
         return View(userItems);
       }

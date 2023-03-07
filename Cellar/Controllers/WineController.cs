@@ -42,7 +42,7 @@ namespace Cellar.Controllers
         {
           List<Wine> userItems = _db.Wines
                               .Where(entry => entry.User.Id == currentUser.Id)
-                              .Where(wine => wine.Consumed == false && wine.Vintage == search)
+                              .Where(wine => wine.Consumed == false && wine.Vintage.Contains(search))
                               .ToList();
           return View(userItems);
         } 
@@ -50,7 +50,7 @@ namespace Cellar.Controllers
         {
           List<Wine> userItems = _db.Wines
                               .Where(entry => entry.User.Id == currentUser.Id)
-                              .Where(wine => wine.Consumed == false && wine.Origin == search)
+                              .Where(wine => wine.Consumed == false && wine.Origin.Contains(search))
                               .ToList();
           return View(userItems);
         } 
@@ -58,7 +58,7 @@ namespace Cellar.Controllers
         {
           List<Wine> userItems = _db.Wines
                               .Where(entry => entry.User.Id == currentUser.Id)
-                              .Where(wine => wine.Consumed == false && wine.Producer == search)
+                              .Where(wine => wine.Consumed == false && wine.Producer.Contains(search))
                               .ToList();
           return View(userItems);
         } 
@@ -66,7 +66,7 @@ namespace Cellar.Controllers
         {
           List<Wine> userItems = _db.Wines
                               .Where(entry => entry.User.Id == currentUser.Id)
-                              .Where(wine => wine.Consumed == false && wine.Price == search)
+                              .Where(wine => wine.Consumed == false && wine.Price.Contains(search))
                               .ToList();
           return View(userItems);
         } 
@@ -74,7 +74,7 @@ namespace Cellar.Controllers
         {
           List<Wine> userItems = _db.Wines
                               .Where(entry => entry.User.Id == currentUser.Id)
-                              .Where(wine => wine.Consumed == false && wine.Location == search)
+                              .Where(wine => wine.Consumed == false && wine.Location.Contains(search))
                               .ToList();
           return View(userItems);
         } 
@@ -82,7 +82,7 @@ namespace Cellar.Controllers
         {
           List<Wine> userItems = _db.Wines
                               .Where(entry => entry.User.Id == currentUser.Id)
-                              .Where(wine => wine.Consumed == false && wine.Description == search)
+                              .Where(wine => wine.Consumed == false && wine.Description.Contains(search))
                               .ToList();
           return View(userItems);
         } 

@@ -50,3 +50,4 @@
 * 11:00-12:00 -- Add search by vintage functionality to home controller
 * 1:00-1:45 -- Add full search functionality to home controller
 * 1:45-2:30 -- Add full search funcionality to cellar
+* 2:30-3:00 -- Update search funcionality to use .Contains
