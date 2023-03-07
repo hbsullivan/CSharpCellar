@@ -51,3 +51,4 @@
 * 1:00-1:45 -- Add full search functionality to home controller
 * 1:45-2:30 -- Add full search funcionality to cellar
 * 2:30-3:00 -- Update search funcionality to use .Contains
+* 3:00-3:45 -- Research sorting and pagination
