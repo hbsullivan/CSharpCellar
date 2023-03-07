@@ -46,3 +46,4 @@
 * 8:30-9:00 -- Research new styling options, might just do CSS
 * 9:00-9:30 -- Can't find any styling options I like. Will come back to this
 * 9:30-10:30 -- Research adding a search bar 
+* 10:30-11:00 -- WIP: adding search bar to home controller
