@@ -40,7 +40,7 @@
 * 3:45-4:15 -- Fixed project. Tailwind not installed.
 * 4:15-4:45 -- EOD: Re-visit figma and plan for next week
 
-#### Friday, 03/07
+#### Tuesday, 03/07
 * 8:00 -- Start of Day!
 * 8:00-8:30 -- Review Figma and To-Do's for today
 * 8:30-9:00 -- Research new styling options, might just do CSS
@@ -54,3 +54,6 @@
 * 3:00-3:45 -- Research sorting and pagination
 * 3:45-4:15 -- Continue researching sorting and pagination
 * 4:15-4:30 -- EOD: Re-visit figma and plan for tomorrow
+
+#### Wednesday, 03/08
+* 8:00 -- Start of Day!
