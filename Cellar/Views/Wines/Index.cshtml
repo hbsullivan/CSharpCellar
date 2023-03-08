@@ -3,6 +3,8 @@
 }
 
 @using Cellar.Models;
+@model X.PagedList.IPagedList<Cellar.Models.Wine>
+@using X.PagedList.Mvc.Core
 
 <h2>Wines in @User.Identity.Name's cellar</h2>
 <hr />
@@ -33,7 +35,8 @@
    <p>@Html.ActionLink($"{wine.Producer} | {wine.Vintage}", "Details", new { id = wine.WineId })</p>
 
   }
-
+  Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+  @Html.PagedListPager( Model, page => Url.Action("Index", new { page }) )
   <hr />
 
 <p>@Html.ActionLink("Add wine to cellar", "Create")</p>

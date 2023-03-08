@@ -65,3 +65,4 @@
 * 11:30-12:00 -- Research pagination
 * 1:00-1:45 -- WIP: adding pagination
 * 1:45-2:45 -- add pagination to home page
+* 2:45-3:30 -- add pagination to cellar

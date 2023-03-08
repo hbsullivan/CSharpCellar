@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Identity;
 using System.Threading.Tasks;
 using System.Security.Claims;
 using CellarClient.Models;
+using X.PagedList;
 
 
 namespace Cellar.Controllers
@@ -25,10 +26,13 @@ namespace Cellar.Controllers
       _db = db;
     }
 
-    public async Task<ActionResult> Index(string searchBy, string search)
+    public async Task<ActionResult> Index(string searchBy, string search, int? page)
     {
       string userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
       ApplicationUser currentUser = await _userManager.FindByIdAsync(userId);
+
+      int pageSize = 3;
+      int pageNumber = (page ?? 1);
 
       if (search == null)
         {
@@ -36,7 +40,7 @@ namespace Cellar.Controllers
                               .Where(entry => entry.User.Id == currentUser.Id)
                               .Where(wine => wine.Consumed == false)
                               .ToList();
-          return View(userItems);
+          return View(userItems.ToPagedList(pageNumber, pageSize));
         } 
         else if(searchBy == "Vintage") 
         {
@@ -44,7 +48,7 @@ namespace Cellar.Controllers
                               .Where(entry => entry.User.Id == currentUser.Id)
                               .Where(wine => wine.Consumed == false && wine.Vintage.Contains(search))
                               .ToList();
-          return View(userItems);
+          return View(userItems.ToPagedList(pageNumber, pageSize));
         } 
         else if(searchBy == "Origin") 
         {
@@ -52,7 +56,7 @@ namespace Cellar.Controllers
                               .Where(entry => entry.User.Id == currentUser.Id)
                               .Where(wine => wine.Consumed == false && wine.Origin.Contains(search))
                               .ToList();
-          return View(userItems);
+          return View(userItems.ToPagedList(pageNumber, pageSize));
         } 
         else if(searchBy == "Producer") 
         {
@@ -60,7 +64,7 @@ namespace Cellar.Controllers
                               .Where(entry => entry.User.Id == currentUser.Id)
                               .Where(wine => wine.Consumed == false && wine.Producer.Contains(search))
                               .ToList();
-          return View(userItems);
+          return View(userItems.ToPagedList(pageNumber, pageSize));
         } 
         else if(searchBy == "Price") 
         {
@@ -68,7 +72,7 @@ namespace Cellar.Controllers
                               .Where(entry => entry.User.Id == currentUser.Id)
                               .Where(wine => wine.Consumed == false && wine.Price.Contains(search))
                               .ToList();
-          return View(userItems);
+          return View(userItems.ToPagedList(pageNumber, pageSize));
         } 
         else if(searchBy == "Location") 
         {
@@ -76,7 +80,7 @@ namespace Cellar.Controllers
                               .Where(entry => entry.User.Id == currentUser.Id)
                               .Where(wine => wine.Consumed == false && wine.Location.Contains(search))
                               .ToList();
-          return View(userItems);
+          return View(userItems.ToPagedList(pageNumber, pageSize));
         } 
         else if(searchBy == "Description") 
         {
@@ -84,7 +88,7 @@ namespace Cellar.Controllers
                               .Where(entry => entry.User.Id == currentUser.Id)
                               .Where(wine => wine.Consumed == false && wine.Description.Contains(search))
                               .ToList();
-          return View(userItems);
+          return View(userItems.ToPagedList(pageNumber, pageSize));
         } 
         else 
         {
@@ -92,7 +96,7 @@ namespace Cellar.Controllers
                               .Where(entry => entry.User.Id == currentUser.Id)
                               .Where(wine => wine.Consumed == false)
                               .ToList();
-          return View(userItems);
+          return View(userItems.ToPagedList(pageNumber, pageSize));
         }
     }
     public async Task<ActionResult> Consumed()
