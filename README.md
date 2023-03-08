@@ -61,3 +61,4 @@
 * 8:30-9:15 -- WIP: adding sorting to app
 * 9:15-10:00 -- WIP: still adding sorting
 * 10:00-11:00 -- WIP: trying to add sorting
+* 11:00-11:30 -- Will come back to sorting. Can't get it to work
