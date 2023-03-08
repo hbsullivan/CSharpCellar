@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using System.Threading.Tasks;
 using System.Security.Claims;
+using System;
 
 namespace Cellar.Controllers
 {
@@ -78,20 +79,20 @@ namespace Cellar.Controllers
                             .ToList();
         return View(userItems);
       }
-      // if (sortBy == "LowToHigh") {
-      //   List<Wine> userItems = _db.Wines
-      //                       .OrderBy(wine => wine.Price)
-      //                       .Where(wine => wine.Consumed == true)
-      //                       .ToList();
-      //   return View(userItems);
-      // }
-      // else if (sortBy == "HighToLow") {
-      //   List<Wine> userItems = _db.Wines
-      //                       .OrderByDescending(wine => wine.Price)
-      //                       .Where(wine => wine.Consumed == true)
-      //                       .ToList();
-      //   return View(userItems);
-      // }
+      else if (sortBy == "LowToHigh") {
+        List<Wine> userItems = _db.Wines
+                            .Where(wine => wine.Consumed == true)                     
+                            .OrderBy(wine => int.Parse(wine.Price))
+                            .ToList();
+        return View(userItems);
+      }
+      else if (sortBy == "HighToLow") {
+        List<Wine> userItems = _db.Wines
+                            .Where(wine => wine.Consumed == true)
+                            .OrderByDescending(wine => int.Parse(wine.Price))
+                            .ToList();
+        return View(userItems);
+      }
       else
       {
         List<Wine> userItems = _db.Wines
