@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Identity;
 using System.Threading.Tasks;
 using System.Security.Claims;
 using System;
+using PagedList;
 
 namespace Cellar.Controllers
 {
@@ -21,63 +22,66 @@ namespace Cellar.Controllers
     }
 
     [HttpGet("/")]
-    public ActionResult Index(string searchBy, string search, string sortBy)
+    public ActionResult Index(string searchBy, string search, string sortBy, int? page)
     {
+
+      int pageSize = 3;
+      int pageNumber = (page ?? 1);
       if (search == null)
       {
         List<Wine> userItems = _db.Wines
                             .Where(wine => wine.Consumed == true)
                             .ToList();
-        return View(userItems);
+        return View(userItems.ToPagedList(pageNumber, pageSize));
       }
       else if(searchBy == "Vintage")
       {
         List<Wine> userItems = _db.Wines
                             .Where(wine => wine.Consumed == true && wine.Vintage.Contains(search))
                             .ToList();
-        return View(userItems);
+        return View(userItems.ToPagedList(pageNumber, pageSize));
       }
       else if(searchBy == "Origin")
       {
         List<Wine> userItems = _db.Wines
                             .Where(wine => wine.Consumed == true && wine.Origin.Contains(search))
                             .ToList();
-        return View(userItems);
+        return View(userItems.ToPagedList(pageNumber, pageSize));
       }
       else if(searchBy == "Producer")
       {
         List<Wine> userItems = _db.Wines
                             .Where(wine => wine.Consumed == true && wine.Producer.Contains(search))
                             .ToList();
-        return View(userItems);
+        return View(userItems.ToPagedList(pageNumber, pageSize));
       }
       else if(searchBy == "Price")
       {
         List<Wine> userItems = _db.Wines
                             .Where(wine => wine.Consumed == true && wine.Price.Contains(search))
                             .ToList();
-        return View(userItems);
+        return View(userItems.ToPagedList(pageNumber, pageSize));
       }
       else if(searchBy == "Location")
       {
         List<Wine> userItems = _db.Wines
                             .Where(wine => wine.Consumed == true && wine.Location.Contains(search))
                             .ToList();
-        return View(userItems);
+        return View(userItems.ToPagedList(pageNumber, pageSize));
       }
       else if(searchBy == "Rating")
       {
         List<Wine> userItems = _db.Wines
                             .Where(wine => wine.Consumed == true && wine.Rating.Contains(search))
                             .ToList();
-        return View(userItems);
+        return View(userItems.ToPagedList(pageNumber, pageSize));
       }
       else if(searchBy == "Description")
       {
         List<Wine> userItems = _db.Wines
                             .Where(wine => wine.Consumed == true && wine.Description.Contains(search))
                             .ToList();
-        return View(userItems);
+        return View(userItems.ToPagedList(pageNumber, pageSize));
       }
       // else if (sortBy == "LowToHigh") {
       //   List<Wine> userItems = _db.Wines
@@ -98,7 +102,7 @@ namespace Cellar.Controllers
         List<Wine> userItems = _db.Wines
                             .Where(wine => wine.Consumed == true)
                             .ToList();
-        return View(userItems);
+        return View(userItems.ToPagedList(pageNumber, pageSize));
       }
 
 

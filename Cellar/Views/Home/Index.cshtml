@@ -2,7 +2,9 @@
   Layout = "_Layout";
 }
 
-@using Cellar.Models;
+@* @using Cellar.Models; *@
+@model X.PagedList.IPagedList<Cellar.Models.Wine>
+@using X.PagedList.Mvc.Core
 
 <h1>C# Cellar</h1>
 <h3>Community Tasting Notes</h3>
@@ -46,3 +48,7 @@
    <p>Rating: @wine.Rating</p>
   <hr />
   }
+
+
+Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+@Html.PagedListPager( Model, page => Url.Action("Index", new { page }) )
