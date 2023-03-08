@@ -27,13 +27,15 @@
         @Html.TextBox("search") <input type="submit" value="Search" />
     }
 </p>
-<p>
+@* <p>
     @using (@Html.BeginForm("Index", "Home", FormMethod.Get))
     {
-        <b>Sort By Price High to Low </b>
+        <b>Sort By:</b>
+        @Html.RadioButton("sortBy", "LowToHigh", true) <text>Low to High</text>
+        @Html.RadioButton("sortBy", "HighToLow") <text>HighToLow</text><br />
         <input type="submit" value="Sort" />
     }
-</p>
+</p> *@
 <hr />
 
 

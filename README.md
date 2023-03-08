@@ -59,3 +59,4 @@
 * 8:00 -- Start of Day!
 * 8:00-8:30 -- Review Figma and To-Do's for today
 * 8:30-9:15 -- WIP: adding sorting to app
+* 9:15-10:00 -- WIP: still adding sorting
