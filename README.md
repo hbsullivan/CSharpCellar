@@ -53,3 +53,4 @@
 * 2:30-3:00 -- Update search funcionality to use .Contains
 * 3:00-3:45 -- Research sorting and pagination
 * 3:45-4:15 -- Continue researching sorting and pagination
+* 4:15-4:30 -- EOD: Re-visit figma and plan for tomorrow
