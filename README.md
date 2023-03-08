@@ -64,3 +64,4 @@
 * 11:00-11:30 -- Will come back to sorting. Can't get it to work
 * 11:30-12:00 -- Research pagination
 * 1:00-1:45 -- WIP: adding pagination
+* 1:45-2:45 -- add pagination to home page
