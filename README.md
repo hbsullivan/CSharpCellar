@@ -52,3 +52,4 @@
 * 1:45-2:30 -- Add full search funcionality to cellar
 * 2:30-3:00 -- Update search funcionality to use .Contains
 * 3:00-3:45 -- Research sorting and pagination
+* 3:45-4:15 -- Continue researching sorting and pagination
