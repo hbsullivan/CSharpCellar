@@ -24,7 +24,14 @@
         @Html.RadioButton("searchBy", "Location") <text>Location</text><br />
         @Html.RadioButton("searchBy", "Description") <text>Description</text><br />
         @Html.RadioButton("searchBy", "Rating") <text>Rating</text><br />
-        @Html.TextBox("search") <input type="submit" value="search" />
+        @Html.TextBox("search") <input type="submit" value="Search" />
+    }
+</p>
+<p>
+    @using (@Html.BeginForm("Index", "Home", FormMethod.Get))
+    {
+        <b>Sort By Price High to Low </b>
+        <input type="submit" value="Sort" />
     }
 </p>
 <hr />

@@ -20,7 +20,7 @@ namespace Cellar.Controllers
     }
 
     [HttpGet("/")]
-    public ActionResult Index(string searchBy, string search)
+    public ActionResult Index(string searchBy, string search, bool sort)
     {
       if (search == null)
       {
@@ -78,6 +78,13 @@ namespace Cellar.Controllers
                             .ToList();
         return View(userItems);
       }
+      else if (sort) {
+        List<Wine> userItems = _db.Wines
+                            .Where(wine => wine.Consumed == true)
+                            .OrderByDescending(wine => wine.Price)
+                            .ToList();
+        return View(userItems);
+      }
       else
       {
         List<Wine> userItems = _db.Wines
@@ -85,6 +92,7 @@ namespace Cellar.Controllers
                             .ToList();
         return View(userItems);
       }
+
 
     }
   }
