@@ -1,3 +1,92 @@
+# C# Cellar
+
+#### By Henry Sullivan
+
+#### A web app for cellar inventory.
+
+## Technologies Used
+
+* C#
+* .Net 6
+* ASP.Net Core 6 MVC
+* EF Core 6
+* SQL
+* MySQL
+* MySQL Workbench
+* LINQ
+* Identity
+* X.PagedList
+***
+
+## Description
+
+A web app for keeping track of wines in cellar along with the wine details. Also has an education tab to learn more about various wine regions. Can view tasting notes from other users as well.
+***
+
+## Setup/Installation Requirements
+
+#### Connect to CSharpCellarAPI
+1. Clone the `CSharpCellarApi` to your machine (https://github.com/hbsullivan/CSharpCellarApi.git)
+2. Navigate to the `CSharpCellarApi` project directory
+3. Create a file named `appsettings.json` with the following code. Be sure to update the Default Connection to your MySQL credentials.
+```
+{
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Warning"
+    }
+  },
+  "AllowedHosts": "*",
+  "ConnectionStrings": {
+    "DefaultConnection": "Server=localhost;Port=3306;database=cellar_api;uid=[YOUR-USERNAME-HERE];pwd=[YOUR-PASSWORD-HERE];"
+  }
+}
+```
+4. Install dependencies by running in the project directory
+```
+$ dotnet restore
+```
+5. Build local copy of database by running in the project directory
+```
+$ dotnet ef database update
+```
+6. Build & run API in development by running in the project directory
+ ```
+ $ dotnet run
+ ```
+#### Open project
+1. Navigate to the `Cellar` directory.
+2. Create a file named `appsettings.json` with the following code. Be sure to update the Default Connection to your MySQL credentials.
+```
+{
+  "ConnectionStrings": {
+    "DefaultConnection": "Server=localhost;Port=3306;database=c_sharp_cellar;uid=[YOUR-USERNAME-HERE];pwd=[YOUR-PASSWORD-HERE];",
+  }
+}
+```
+3. Install dependencies within the `Cellar` directory
+```
+$ dotnet restore
+```
+
+4. To build & run program in development mode 
+ ```
+ $ dotnet run
+ ```
+
+5. To build & run program in production mode 
+ ```
+ dotnet run --launch-profile "production"
+ ```
+***
+
+## Known Bugs
+
+* 'Sort' functionality does not work
+* If you find any other bugs please email me at sullivanbhenry@gmail.com
+***
+
 ### Research & Planning Log
 #### Friday, 02/17
 * 9:00-9:30 -- Research on building MVC application
@@ -72,3 +161,17 @@
 
 #### Thursday, 03/09
 * 8:00 -- Start of Day!
+* 8:00-9:00 - Work on README
+
+***
+## License
+
+MIT License
+
+Copyright (c) 2023 Henry Sullivan
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
