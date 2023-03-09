@@ -167,7 +167,7 @@ $ dotnet restore
 * 8:00-9:00 - Work on README
 * 9:00-10:00 - Work on README for CellarAPI
 * 10:00-11:00 - WIP: sorting
-* 11:00-11:30 - Practice presentation
+* 11:00-11:45 - Practice presentation
 ***
 ## License
 
