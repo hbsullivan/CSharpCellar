@@ -83,20 +83,20 @@ namespace Cellar.Controllers
                             .ToList();
         return View(userItems.ToPagedList(pageNumber, pageSize));
       }
-      // else if (sortBy == "LowToHigh") {
-      //   List<Wine> userItems = _db.Wines
-      //                       .Where(wine => wine.Consumed == true)                     
-      //                       .OrderBy(wine => int.Parse(wine.Price))
-      //                       .ToList();
-      //   return View(userItems);
-      // }
-      // else if (sortBy == "HighToLow") {
-      //   List<Wine> userItems = _db.Wines
-      //                       .Where(wine => wine.Consumed == true)
-      //                       .OrderByDescending(wine => int.Parse(wine.Price))
-      //                       .ToList();
-      //   return View(userItems);
-      // }
+      else if (sortBy == "LowToHigh") {
+        List<Wine> userItems = _db.Wines
+                            .Where(wine => wine.Consumed == true)                     
+                            .OrderBy(wine => int.Parse(wine.Price))
+                            .ToList();
+        return View(userItems);
+      }
+      else if (sortBy == "HighToLow") {
+        List<Wine> userItems = _db.Wines
+                            .Where(wine => wine.Consumed == true)
+                            .OrderByDescending(wine => int.Parse(wine.Price))
+                            .ToList();
+        return View(userItems);
+      }
       else
       {
         List<Wine> userItems = _db.Wines
