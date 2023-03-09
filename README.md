@@ -68,3 +68,4 @@
 * 2:45-3:30 -- add pagination to cellar
 * 3:30-3:45 -- Look at sorting again
 * 3:45-4:15 -- Career Services meeting
+* 4:15-4:45 -- EOD: Re-visit figma and plan for tomorrow
