@@ -67,3 +67,4 @@
 * 1:45-2:45 -- add pagination to home page
 * 2:45-3:30 -- add pagination to cellar
 * 3:30-3:45 -- Look at sorting again
+* 3:45-4:15 -- Career Services meeting
