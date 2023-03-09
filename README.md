@@ -84,7 +84,10 @@ $ dotnet restore
 ## Known Bugs
 
 * 'Sort' functionality does not work
-* If you find any other bugs please email me at sullivanbhenry@gmail.com
+* No other known bugs. If you find one, please email me at  [sullivanbhenry@gmail.com](mailto:sullivanbhenry@gmail.com) and include:
+  * BUG: _A brief description of the bug_
+  * FIX: _Suggestion for solution (if you have one!)_
+  * If you'd like to be credited, please also include your **_github user profile link_**
 ***
 
 ### Research & Planning Log
@@ -162,6 +165,7 @@ $ dotnet restore
 #### Thursday, 03/09
 * 8:00 -- Start of Day!
 * 8:00-9:00 - Work on README
+* 9:00-10:00 - Work on README for CellarAPI
 
 ***
 ## License
